@@ -10,8 +10,11 @@ public class Game extends Canvas implements Runnable{
     private Handler handler;
 
     public Game() {
-        new Window(WIDTH, HEIGHT, "Let´s build a game", this);
         handler = new Handler();
+
+        this.addKeyListener(new KeyInput(handler));
+
+        new Window(WIDTH, HEIGHT, "Let´s build a game", this);
 
         handler.addObject(new Player(100, 100, ID.Player));
     }

@@ -6,6 +6,7 @@ public class Player extends GameObject {
         super(x, y, id);
 
         speedX = 1;
+        speedY = 1;
     }
 
     @Override
