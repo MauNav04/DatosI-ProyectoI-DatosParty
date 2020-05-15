@@ -12,6 +12,8 @@ public class Game extends Canvas implements Runnable{
     public Game() {
         new Window(WIDTH, HEIGHT, "Let´s build a game", this);
         handler = new Handler();
+
+        handler.addObject(new Player(100, 100, ID.Player));
     }
 
     public synchronized void start(){
